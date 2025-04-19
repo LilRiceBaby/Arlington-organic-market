@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Arlington Organic Market Interface</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Arlington Organic Market Interface</h1>
+
+    <!-- Q1: Add Product -->
+    <section>
+      <h2>Add Almond Nuts</h2>
+      <button onclick="addProduct()">Add Product</button>
+      <p id="addProductResult"></p>
+    </section>
+
+    <!-- Q2: View Available Products -->
+    <section>
+      <h2>Available Products (Store ID 1)</h2>
+      <button onclick="fetchAvailableProducts()">View Products</button>
+      <table id="productTable"></table>
+    </section>
+
+    <!-- Q3: Update Price -->
+    <section>
+      <h2>Update Price of Almond Nuts</h2>
+      <button onclick="updatePrice()">Update to $10.99</button>
+      <p id="updatePriceResult"></p>
+    </section>
+
+    <!-- Q4: Remove Product -->
+    <section>
+      <h2>Remove Almond Nuts</h2>
+      <button onclick="removeProduct()">Remove Product</button>
+      <p id="removeProductResult"></p>
+    </section>
+
+    <!-- Views -->
+    <section>
+      <h2>View-Based Queries</h2>
+      <button onclick="runQuery('top-items')">Top 3 Items by Revenue</button>
+      <button onclick="runQuery('items-over-50')">Items Sold > 50</button>
+      <button onclick="runQuery('top-customer')">Top Loyal Customer</button>
+      <button onclick="runQuery('loyal-customers')">Loyalty Score 4–5</button>
+      <button onclick="runQuery('total-revenue')">Total Revenue</button>
+      <table id="viewResults"></table>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
